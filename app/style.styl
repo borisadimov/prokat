@@ -4,10 +4,14 @@ global-reset()
 
 body
   font-family 'Helvetica'
-  color #fff
-  text-transform uppercase
-  font-size 13px
+  color #000
   min-width 960px
+  a
+    cursor pointer
+    text-decoration none
+    color #fff
+    &:visited
+      color #fff
 
 
 .inner
@@ -15,7 +19,10 @@ body
   width 940px
   height 100%
   margin 0 auto
-  background rgba(255,255,255,0.1)
+  background rgba(33,33,33,0.1)
+
+
+
 
 
 .menu
@@ -23,6 +30,9 @@ body
   background #307cbc
   text-align center
   position relative
+  color #fff
+  text-transform uppercase
+  font-size 13px
   ul
     margin 0 auto
     display inline-block
@@ -48,7 +58,8 @@ body
   height 36px
   background #000
   text-align center
-  font-size 12px
+  font-size 14px
+
   ul
     margin 0 auto
     display inline-block
@@ -56,9 +67,7 @@ body
       display inline-block
       a
         display inline-block
-        padding 12px 30px 12px 30px
-        cursor pointer
-        text-decoration none
+        padding 11px 35px 11px 35px
         &:visited
           color #fff
         &:hover
@@ -66,6 +75,29 @@ body
       &:hover
         background #fff
         color #000
+
+
+.categories
+  text-align center
+  ul
+    display inline-block
+    margin-top 33px
+    li
+      display inline-block
+      margin 0 7px 0 7px
+      a
+        color #939393
+        display inline-block
+        padding 4px 8px 4px 8px
+        background #fff
+        font-size 13px
+        &:visited
+          color #939393
+        &:hover
+          background #000
+          color #fff
+
+
 
 
 
