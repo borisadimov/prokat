@@ -1,29 +1,12 @@
 @import 'nib'
 
-global-reset()
 
-body
-  font-family 'Helvetica'
-  color #000
-  min-width 960px
-  a
-    cursor pointer
-    text-decoration none
-    color #fff
-    &:visited
-      color #fff
-
-
-.inner
-  position relative
-  width 940px
-  height 100%
-  margin 0 auto
   //background rgba(33,33,33,0.1)
 
 
-
-
+@media (max-width: 960px)
+  .fixed
+    position relative !important
 
 .menu
   height 130px
@@ -45,14 +28,14 @@ body
         margin-left 168px
       &:nth-child(1)
         margin-left 0px
-
   .logo
     position absolute
     left 50%
     top 50%
     transform translate(-50%,-50%)
     margin-top 8px
-
+.menu_fix
+  padding-bottom 36px
 
 .submenu
   height 36px
@@ -78,7 +61,12 @@ body
       &:hover
         background #fff
         color #000
-
+&.fixed
+  position fixed
+  top 0
+  z-index 999
+  width 100%
+  min-width 960px
 
 .categories
   text-align center
@@ -111,10 +99,11 @@ body
     height 370px
     text-align center
     padding-top 100px
+    cursor pointer
     img
       height 300px
       margin-top 0px
-      transition transform 0.8s ease, margin 0.3s ease-in
+      transition transform 0.8s ease, margin 0.3s ease-in,height 0.7s ease
     p.model
       margin-top 32px
       font-size 26px
@@ -164,17 +153,32 @@ body
       p.model
         opacity 0
       img
-        transform scale(0.35,0.35)
-        margin-top 110px
+        height 110px
+        margin-top 190px
       .button
         opacity 1
       p.text
         opacity 1
-
-
-
-
-
+.content
+  padding-bottom 50px
+.footer
+  height 48px
+  width 100%
+  min-width 960px
+  background #307cbc
+  position: fixed
+  z-index 5
+  bottom 0
+.social
+  padding-top 48px
+  height 630px
+  width 100%
+  min-width 960px
+  background #307cbc
+  position: relative
+.relative
+  position relative
+  padding-top 0px
 
 
 

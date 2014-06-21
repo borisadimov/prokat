@@ -3,6 +3,24 @@
 
 global-reset()
 
+body
+  font-family 'Helvetica'
+  color #000
+  min-width 960px
+  a
+    cursor pointer
+    text-decoration none
+    color #fff
+    &:visited
+      color #fff
+
+
+.inner
+  position relative
+  width 940px
+  height 100%
+  margin 0 auto
+
 .main
   background: linear-gradient(to top, #64d2f2, #307cbc)
   height 100%
@@ -26,7 +44,7 @@ global-reset()
   .right_arrow
     background: url(../i/strela.svg) no-repeat center center
     background-size 100% 100%
-    
+
     right 10px
 
   .title
@@ -70,6 +88,6 @@ global-reset()
    z-index 50
 
 
-.menu
+.menu.index
 	z-index 3
 	background none
