@@ -61,10 +61,10 @@ body
   font-size 14px
 
   ul
-    margin 0 auto
-    display inline-block
+    margin-left 25px
+    clearfix()
     li
-      display inline-block
+      float left
       transition all 0.25s ease-in-out
       margin 0
       a
@@ -102,13 +102,17 @@ body
           color #fff
 
 .bikes
+  clearfix()
   .bike
-    display: inline-block
-
-
-.main
-  background: linear-gradient(bottom, #307cbc, #64d2f2)
-
+    position relative
+    overflow hidden
+    float left
+    width 470px
+    height 450px
+    text-align center
+    padding-top 130px
+    img
+      height 250px
 
 
 
