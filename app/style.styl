@@ -1,1 +1,86 @@
 @import 'nib'
+
+global-reset()
+
+body
+  font-family 'Helvetica'
+  color #fff
+  text-transform uppercase
+  font-size 13px
+  min-width 960px
+
+
+.inner
+  position relative
+  width 940px
+  height 100%
+  margin 0 auto
+  background rgba(255,255,255,0.1)
+
+
+.menu
+  height 130px
+  background #307cbc
+  text-align center
+  position relative
+  ul
+    margin 0 auto
+    display inline-block
+    li
+      display inline-block
+      width 80px
+      margin-top 56px
+      margin-left 24px
+      &:nth-child(3)
+        margin-left 168px
+      &:nth-child(1)
+        margin-left 0px
+
+  .logo
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%,-50%)
+    margin-top 8px
+
+
+.submenu
+  height 36px
+  background #000
+  text-align center
+  font-size 12px
+  ul
+    margin 0 auto
+    display inline-block
+    li
+      display inline-block
+      a
+        display inline-block
+        padding 12px 30px 12px 30px
+        cursor pointer
+        text-decoration none
+        &:visited
+          color #fff
+        &:hover
+          color #000
+      &:hover
+        background #fff
+        color #000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

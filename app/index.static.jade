@@ -7,15 +7,45 @@ head
   script(src="javascripts/vendor.js")
   script(src="javascripts/app.js")
 
+  script.
+    require('initialize');
 
 
 body
-  h1 Hello, homeless!
+  .menu
+    .inner
+      ul
+        li
+          a прокат
+        li
+          a инфо
+        li
+          a галерея
+        li
+          a контакты
+      .logo
+       img(src="/i/logo.png")
+  .submenu
+    .inner
+      ul
+        li
+          a(href="#") велики
+        li
+          a(href="#") ролики
+        li
+          a(href="#") самокаты
+        li
+          a(href="#") сноуборды
+        li
+          a(href="#") фото/видео
+        li
+          a(href="#") туризм
+        li
+          a(href="#") отдых
 
 
 
 
 
 
-  script.
-    require('initialize');
+
