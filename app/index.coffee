@@ -1,18 +1,14 @@
-`
-console.log("require забыл")
-var time = 1500;
+time = 1500
 
+$(document).ready ->
+  $(".dot_block li").click (e) ->
+    index = $(this).index()
+    $(".dot").removeClass("active")
+    # — решетка это комент, :eq() jQuery селектор типа :nth-child в CSS
+    # "my Var = #{x}" это интерполяция строки эквивалентно:
+    # "my Var"+x ; интерполяция работает только в двойных кавычках
+    # "работает: #{x}"   |  'не работает: #{x}'
+    $(".dot:eq(#{index})").addClass('active')
+    $('.slide').fadeOut(time)
+    $(".slide:eq(#{index})").fadeIn(time)
 
-$('.dot2').onclick = (function()
-{
-  $('.dot1').removeClass('active');
-  $('.dot3').removeClass('active');
-  $('.dot4').removeClass('active');
-  $('.dot5').removeClass('active');
-  $('.dot6').removeClass('active');
-  $('.dot7').removeClass('active');
-  $('.dot2').addClass('active');
-  $('.bikes').fadeOut(time);
-  $('.rolls').fadeIn(time);
-});
-`
