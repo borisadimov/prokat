@@ -9,6 +9,8 @@ $(document).ready ->
     # "my Var"+x ; интерполяция работает только в двойных кавычках
     # "работает: #{x}"   |  'не работает: #{x}'
     $(".dot:eq(#{index})").addClass('active')
+    #TODO: Сделать фэйды паралаксовой анимацией слева направо, анимируя
+    #      через css transition, меняя в js только конечные координаты
     $('.slide').fadeOut(time)
     $(".slide:eq(#{index})").fadeIn(time)
 
