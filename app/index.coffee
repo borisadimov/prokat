@@ -1,4 +1,5 @@
 `
+console.log("require забыл")
 var time = 1500;
 
 
