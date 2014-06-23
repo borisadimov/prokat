@@ -29,6 +29,8 @@ body
   width 100%
   margin-top -130px
   z-index 2
+  .disp
+    display block
   .arrow
   	height 80px
   	width 40px
@@ -40,13 +42,54 @@ body
     background: url(../i/strela.svg) no-repeat center center
     background-size 100% 100%
     transform rotate(180deg)
+    display none
     left 10px
   .right_arrow
     background: url(../i/strela.svg) no-repeat center center
     background-size 100% 100%
-
     right 10px
-
+  .dot_block
+    width 165px
+    height 30px
+    position absolute
+    top 650px
+    left 50%
+    transform translate(-50%,0)
+    ul
+    margin 0 auto
+    margin-left 5px
+    display inline-block
+    li
+      display inline-block
+      width 15px
+      height 15px
+      margin-top 5px
+      margin-left 5px
+      &:nth-child(1)
+        margin-left 0px
+      div
+        width 5px
+        height 5px
+        background white
+        border 2px solid white
+        border-radius 25px
+        cursor pointer
+        &:hover, &:active
+          width 13px
+          height 13px
+          border 2px solid white
+          border-radius 25px
+          background none
+          margin-top -4px
+          margin-left -4px
+      .active
+        width 13px
+        height 13px
+        border 2px solid white
+        border-radius 25px
+        background none
+        margin-top -4px
+        margin-left -4px
   .title
   	p
      font-size 160px
@@ -59,6 +102,13 @@ body
      transform translate(-50%,0)
      margin-top 120px
      font-family HelveticaNeue Bold
+  .bikes
+    ._content
+      background: url(../i/bike.png) no-repeat center center
+  .rolls
+    display none
+    ._content
+      background: url(../i/rolls.png) no-repeat center center
   .namer
      width 120px
      height 40px
@@ -77,14 +127,13 @@ body
      	p
      	  font-size 12px
 
- .bike_content
+ ._content
    height 400px
    width 640px
    position absolute
    top 200px
    left 50%
-   transform translate(-50%,0)
-   background: url(../i/bike.png) no-repeat center center
+   transform translate(-50%,0)  
    z-index 50
 
 
