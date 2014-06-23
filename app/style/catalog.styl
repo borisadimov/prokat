@@ -7,7 +7,6 @@
 @media (max-width: 960px)
   .fixed
     position relative !important
-
 .menu
   height 130px
   background #307cbc
@@ -135,6 +134,7 @@
       transition all 0.4s ease
     .button
       position absolute
+      z-index 21
       bottom 28px
       width 150px
       left 50%
@@ -165,21 +165,84 @@
   height 48px
   width 100%
   min-width 960px
-  background #FF7cbc
   position: fixed
-  z-index 5
+  background #307cbc
+  z-index 100
   bottom 0
+  font-size 11px
+  text-transform uppercase
+  .left
+    position absolute
+    left 182px
+  .middle
+    position absolute
+    left 50%
+    text-align center
+    transform translateX(-50%)
+    p:nth-child(2)
+      font-size 16px
+      letter-spacing 0.05em
+
+  .right
+    position absolute
+    right 182px
+    width 180px
+    text-align right
+    .bag
+      height 30px
+      padding-top 3px
+    clearfix()
+    p
+      text-align right
+      margin-right: 27px
+    .icon
+      position relative
+      z-index 105
+      right 0
+      margin-top -1px
+      width 19px
+      height 19px
+      float right
+      border 2px solid #fff
+      background #307cbc
+      text-align center
+      vertical-align middle
+      border-radius(500px)
+      transition opacity 0.25s ease
+      svg
+        opacity 0
+        margin-top -5px
+        width 25px
+        height 25px
+
+  >.inner> div
+    margin-top 12px
+  p
+    line-height 1.1em
 .social
   padding-top 48px
   height 630px
   width 100%
   min-width 960px
   background #307cbc
-  position: relative
+  position relative
+  color #fff
+
+
 .relative
   position relative
   padding-top 0px
 
+.coin
+  opacity 0
+  width 24px
+  height 24px
+  position fixed
+  background #307cbc url(../i/logo.png)
+  background-size 24px 24px
+  z-index 101
+  border-radius 500px
+  //transition opacity 0.3s ease, top 1s cubic-bezier(0.215, -0.600, 1.000, -0.105), left 1s ease
 
 
 

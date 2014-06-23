@@ -14,5 +14,19 @@ $ ->
     else
       $('.submenu.fix').removeClass 'fixed'
       $('.menu').removeClass 'menu_fix'
+  $(".button").click (e)->
+    top = e.pageY-$(window).scrollTop()
+    left = e.pageX-$(window).scrollLeft()
+    newTop = $(".footer .icon").offset().top-$(window).scrollTop()
+    newLeft = $(".footer .icon").offset().left-$(window).scrollLeft()
+    $(".coin").css
+      top: top
+      left: left
 
+    $(".coin").animate {opacity: "1"},  { queue: false, duration:20, easing: "easeInQuart"}
+    .animate {top: newTop},  { queue: false, duration:1000, easing: "easeOutQuart"}
+    .animate {left: newLeft},  { queue: false, duration:1000, complete: ->
+      $(".coin").animate {opacity: "0"}, 200
+      $(".icon svg").attr("style", "opacity: 1")
+    }
 
