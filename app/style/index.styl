@@ -30,6 +30,7 @@ body
   width 100%
   margin-top -130px
   z-index 2
+  overflow hidden
   .disp
     display block !important
   .arrow
@@ -104,23 +105,27 @@ body
      transform translate(-50%,0)
      margin-top 120px
      font-family HelveticaNeue Bold
+  .slide
+    position absolute
+
   .bikes
+    left 50%
     ._content
       background: url(../i/bike.png) no-repeat center center
   .rolls
-    display none
+    left -150%
     ._content
       background: url(../i/rolls.png) no-repeat center center
   .scooters
-    display none
+    left -150%
     ._content
       background: url(../i/scooters.png) no-repeat center center
   .snowboards
-    display none
+    left -150%
     ._content
       background: url(../i/snowboards.png) no-repeat center center
   .photo_video
-    display none
+    left -150%
     ._content
       background: url(../i/photo_video.png) no-repeat center center
     .title
@@ -128,11 +133,11 @@ body
         top 250px
         font-size 90px
   .tourism
-    display none
+    left -100%
     ._content
       background: url(../i/tourism.png) no-repeat center center
   .rest
-    display none
+    left -100%
     ._content
       background: url(../i/rest.png) no-repeat center center
   .namer
