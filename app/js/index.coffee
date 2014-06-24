@@ -12,15 +12,37 @@ $(document).ready ->
       i = index1 - index0 + 1
       ind0 = index0
       while i>0
-        setTimeout ()->
-          ind0 = ind0+1
-          console.log(ind0)
+        ind0 = ind0+1
+        console.log(ind0)
+        move(".slide:nth-child(#{ind0})")
+        .set('left','200%')
+        .duration('1s')
+        .delay("0.#{i}s")
+        .end()
+        i = i-1
+      move(".slide:nth-child(#{index1+1})")
+      .set('left','50%')
+      .duration('2s')
+      .end()
+    else
+      i = index0 - index1 + 1
+      ind0 = index0 + 2
+      while i>0
+        ind0 = ind0-1
+        console.log('ind0='+ind0)
+        console.log('index0='+index0)
+        console.log('index1='+index1)
+        if ind0 isnt index0 + 1
           move(".slide:nth-child(#{ind0})")
           .set('left','200%')
-          .duration('1s')
+          .duration('0s')
           .end()
-          i = i-1
-        , 1000
+        move(".slide:nth-child(#{ind0})")
+        .set('left','-150%')
+        .duration('1s')
+        .delay("0.#{i}s")
+        .end()
+        i = i-1
       move(".slide:nth-child(#{index1+1})")
       .set('left','50%')
       .duration('2s')
