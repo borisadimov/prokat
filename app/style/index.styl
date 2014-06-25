@@ -1,7 +1,32 @@
+font-face(family, font=family, path='../fonts')
+  @font-face
+    font-family family
+    src url(file(font, 'eot', path))
+    src url(file(font, 'eot?#iefix', path)) format("embedded-opentype"),url(file(font, 'woff', path)) format("woff"),url(file(font, 'ttf', path)) format("truetype"),url(file(font, 'svg#' + family, path)) format("svg")
+    font-weight normal
+    font-style normal
+
+font-face('Gals','gals')
+font-face('Helvetica','helvetica')
+font-face('Gill','gil')
+
 
 @import 'nib'
 
 global-reset()
+
+font-face(family, font=family, path='../fonts')
+  @font-face
+    font-family family
+    src url(file(font, 'eot', path))
+    src url(file(font, 'eot?#iefix', path)) format("embedded-opentype"),url(file(font, 'woff', path)) format("woff"),url(file(font, 'ttf', path)) format("truetype"),url(file(font, 'svg#' + family, path)) format("svg")
+    font-weight normal
+    font-style normal
+
+font-face('Gals','gals')
+font-face('Helvetica','helvetica')
+font-face('Gill','gil')
+
 
 body
   font-family "Gill"
@@ -77,6 +102,8 @@ body
         border 2px solid white
         border-radius 25px
         cursor pointer
+        transition background 0.3s ease, height 0.3s ease, width 0.3s ease, margin-left 0.3s ease, margin-top 0.3s ease
+
         &:hover, &:active
           width 13px
           height 13px
