@@ -1,2 +1,1 @@
-
-
+@bag = require("js/bag")

@@ -1,6 +1,5 @@
 isCoinAnimated = false
 
-
 $ ->
   $(window).scroll ->
     if $(window).scrollTop() >= 130
