@@ -19,7 +19,7 @@ $(document).ready ->
     if index1 - index0 > 0
       i = index1 - index0 + 1
       ind0 = index0
-      while i>0
+      while i>1
         ind0 = ind0+1
         console.log(ind0)
         move(".slide:nth-child(#{ind0+1})")
@@ -40,6 +40,10 @@ $(document).ready ->
         .duration('0.5s')
         .delay("0.#{i}s")
         .end()
+        move(".slide:nth-child(#{ind0}) .namer ")
+        .set('opacity','0')
+        .duration('0s')
+        .end()
         i = i-1
       move(".slide:nth-child(#{index1+1})")
       .set('left','50%')
@@ -48,6 +52,11 @@ $(document).ready ->
       move(".title:nth-child(#{index1+1}) p")
       .set('left','50%')
       .duration('1.5s')
+      .end()
+      move(".slide:nth-child(#{index1+1}) .namer ")
+      .set('opacity','1')
+      .delay('2.7s')
+      .duration('1s')
       .end()
     else
       i = index0 - index1 + 1
@@ -73,6 +82,10 @@ $(document).ready ->
         .duration('0.5s')
         .delay("0.#{i}s")
         .end()
+        move(".slide:nth-child(#{ind0}) .namer ")
+        .set('opacity','0')
+        .duration('0s')
+        .end()
         i = i-1
       move(".slide:nth-child(#{index1+1})")
       .set('left','50%')
@@ -81,6 +94,11 @@ $(document).ready ->
       move(".title:nth-child(#{index1+1}) p")
       .set('left','50%')
       .duration('1.5s')
+      .end()
+      move(".slide:nth-child(#{index1+1}) .namer ")
+      .set('opacity','1')
+      .delay('2.7s')
+      .duration('1s')
       .end()
     index0 = index1
   $(".right_arrow").click (e) ->
@@ -97,6 +115,10 @@ $(document).ready ->
     .set('left','-150%')
     .duration('0.5s')
     .end()
+    move(".slide:nth-child(#{index0+1}) .namer ")
+    .set('opacity','0')
+    .duration('0s')
+    .end()
     move(".slide:nth-child(#{index0+2})")
     .set('left','200%')
     .duration('0s')
@@ -112,6 +134,11 @@ $(document).ready ->
     move(".title:nth-child(#{index0+2}) p")
     .set('left','50%')
     .duration('0.5s')
+    .end()
+    move(".slide:nth-child(#{index0+2}) .namer ")
+    .set('opacity','1.0')
+    .delay('1.5s')
+    .duration('1s')
     .end()
     $(".left_arrow").addClass("disp")
     index0 = index0+1
@@ -146,7 +173,40 @@ $(document).ready ->
     .set('left','200%')
     .duration('0.5s')
     .end()
+    move(".slide:nth-child(#{index0+1}) .namer ")
+    .set('opacity','0')
+    .duration('0s')
+    .end()
+    move(".slide:nth-child(#{index0}) .namer ")
+    .set('opacity','1.0')
+    .delay('1.5s')
+    .duration('1s')
+    .end()
     $(".right_arrow").addClass("disp")
+  page_h = $(window).height() - 130 + 'px'
+  page_h_top = ($(window).height() - 581)/2 - 30 + 'px'
+  move(".main")
+  .set("height",page_h)
+  .duration('0s')
+  .end()
+  move(".top_spacer")
+  .set("height",page_h_top)
+  .duration('0s')
+  .end()
+$(window).resize ->
+  move = require('js/move')
+  window.move = move
+  page_h = $(window).height() - 130 + 'px'
+  page_h_top = ($(window).height() - 581)/2 - 30 + 'px'
+  move(".main")
+  .set("height",page_h)
+  .duration('0s')
+  .end()
+  move(".top_spacer")
+  .set("height",page_h_top)
+  .duration('0s')
+  .end()
+
   # console.log("азазаа")
   # i = 0
   # mas = $(".titler p")
@@ -174,6 +234,9 @@ $(document).ready ->
   # $(".dot_block li").click (e) ->
   #   clearInterval(interval)
   #   console.log("cleared")
+
+
+
 
 
 
