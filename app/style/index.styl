@@ -103,23 +103,29 @@ body
         border-radius 25px
         cursor pointer
         transition background 0.3s ease, height 0.3s ease, width 0.3s ease, margin-left 0.3s ease, margin-top 0.3s ease
-
-        &:hover, &:active
-          width 13px
-          height 13px
+        &:active
+          width 13px !important
+          height 13px !important
           border 2px solid white
           border-radius 25px
           background none
-          margin-top -4px
-          margin-left -4px
+          margin-top -4px !important
+          margin-left -4px !important
+        &:hover
+          width 8px
+          height 8px
+          border 2px solid white
+          border-radius 25px
+          margin-top -2px
+          margin-left -2px
       .active
-        width 13px
-        height 13px
+        width 13px !important
+        height 13px !important
         border 2px solid white
         border-radius 25px
         background none
-        margin-top -4px
-        margin-left -4px
+        margin-top -4px !important
+        margin-left -4px !important
   .title
   	p
      font-size 160px
