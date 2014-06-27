@@ -1,0 +1,66 @@
+doctype html
+head
+  meta(name="viewport" content="width=device-width")
+
+  link(rel="stylesheet" href="stylesheets/app.css")
+
+  script(src="javascripts/vendor.js")
+  script(src="javascripts/app.js")
+  script(src="http://maps.googleapis.com/maps/api/js?sensor=false")
+
+  script.
+    require('js/initialize');
+    require('js/catalog');
+    require('js/contacts');
+
+
+
+body
+  .coin
+  .menu
+    .inner
+      ul
+        li
+          a(href="#") прокат
+        li
+          a(href="#") инфо
+        li
+          a(href="#") галерея
+        li
+          a(href="#") контакты
+      .logo
+       img(src="/i/logo.png")
+
+  .content
+    #map_canvas
+    .innerrr.tp
+      .white_block
+
+
+
+
+
+
+
+
+  .social
+    .footer
+      .inner
+        .left
+          p служба проката.
+          p Ростов-на-Дону.
+        .middle
+          p заказ по телефону
+          p 256-43-26
+        .right
+          .bag
+            .icon
+              include assets/i/check.svg
+
+            p оформить
+            p заказ
+
+
+
+
+
