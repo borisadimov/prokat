@@ -1,8 +1,6 @@
 body
   onload initialize()
 
-
-
 .content
   padding-bottom 0
   height 800px
@@ -17,7 +15,7 @@ body
     width 940px
     height 800px
     top 130px
-    left 50%
+    left 20%
     transform translate(-50%,0)
     //не работает стрчока выше - хз почему
     background none
@@ -30,5 +28,56 @@ body
       right 0
       top 0
       z-index 2
+      display table
+      p
+        font-size 24px
+        line-height 1.2
+        color #307cbc
+        position absolute
+        left 40px
+        &:nth-child(1)
+          top 35px
+        &:nth-child(2)
+          top 80px
+        .big
+          font-size 42px
+      .frst
+        margin-top 160px
+        height 90px !important
+      .activve
+        margin-left -80px !important
+        height 100px
+        margin-bottom 10px
+        background #307cbc
+        padding-left 210px !important
+      .block1{
+        display table-footer-group
+      .block2{
+        display table-header-group
+        p
+          color white !important
+        &:hover
+          background #307cbc !important
+      .point
+        margin-left 120px
+        height 70px
+        width 270px
+        margin-bottom 10px
+        padding-top 20px
+        padding-bottom 10px
+        padding-left 10px
+        cursor pointer
+        transition background 0.5s ease
+        p
+          color black
+          font-size 16px
+          position relative
+          left 0
+          top 0
+        &:hover
+          background #efefef
+
+
+
 
 

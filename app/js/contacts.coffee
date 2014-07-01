@@ -48,5 +48,11 @@ $(window).resize ->
   .duration('0s')
   .end()
 
-
+$(document).ready ->
+  index0 = $(".point.activve").index()
+  $(".point").click ->
+    index1 = $(this).index()
+    $(".point:nth-child(#{index0+1})").removeClass("activve")
+    $(".point:nth-child(#{index1+1})").addClass("activve")
+    index0 = index1
 
