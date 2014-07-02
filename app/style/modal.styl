@@ -1,0 +1,166 @@
+@import 'nib'
+
+.modal_window
+  display none
+  position fixed
+  width 100%
+  height 100%
+  min-width 960px
+  min-height 700px
+  top 0
+  left 0
+  z-index 1000
+
+  .transpbg
+    cursor pointer
+    width 100%
+    height 100%
+    position absolute
+    background rgba(0,0,0,0.7)
+  .content
+    width 400px
+    height 480px
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%,-50%)
+    background #fff
+    h3
+      text-transform uppercase
+      text-align center
+      font-family gals
+      font-size 24px
+      padding 40px 0px
+    .wrapper
+      display inline-block
+      position: relative
+      width 280px
+      height 60px
+      overflow hidden
+      .slider
+        width 280px
+        height 100px
+        display inline-block
+        margin 0 0px
+        position absolute
+        overflow-x scroll
+        overflow-y hidden
+        .scroller
+          width 1000px
+          text-align center
+          margin 0 auto !important
+          .minibike
+            background url(../i/bike.png) center center no-repeat
+            background-size 90px
+            width 90px
+            height 60px
+            display inline-block
+            margin-left 3px
+            .fade
+              cursor pointer
+              position: relative
+              opacity 0
+              text-align center
+              height 60px
+              overflow hidden
+              background #307cbc
+              transition opacity 0.6s ease
+              p
+                font-size 10px
+                color #fff
+                width 80px
+                margin 0 auto
+                &:first-child
+                  margin-top: 10px
+                &:last-child
+                  margin-top 10px
+                  &:hover
+                    text-decoration: underline
+            &:hover
+              .fade
+                opacity 1
+    .leftar
+      width 40px
+      display inline-block
+      margin 0 7px
+      height 60px
+      cursor pointer
+      transform scaleX(-1)
+      svg
+        height 60px
+        fill #000
+        stroke #000
+        polyline
+          stroke #999
+      &:hover
+        polyline
+          stroke #000
+    .rightar
+      width 40px
+      margin 0 7px
+      display inline-block
+      height 60px
+      cursor pointer
+
+      svg
+        height 60px
+        fill #000
+        stroke #000
+        polyline
+          stroke #999
+      &:hover
+        polyline
+          stroke #000
+    .sendbag
+      margin-top 15px
+      input
+        width 180px
+        height 30px
+        font-size 16px
+        margin 10px 110px
+        border none
+        border-bottom 1px solid #000
+        text-align center
+        outline none
+    .sendform
+      font-family gals
+      cursor pointer
+      margin 40px auto
+      width 160px
+      text-align center
+      font-size 24px
+      border 1px solid #000
+      text-transform uppercase
+      padding 12px 0 6px 0
+      transition all 0.2s ease
+      color #000
+      &:hover
+        border-color #307cbc
+        color #307cbc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //   .cross
+  //   h3
+  //   .slider
+  //     .minibike
+  //       .fade
+  //         p.name
+  //         p.delete
+  //   form
+  //     input
+

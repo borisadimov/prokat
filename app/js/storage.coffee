@@ -34,6 +34,7 @@ class Storage
     index = @bikeArray.indexOf(bike)
     if index > -1
       @counter-=1
+      @counter=0 if @counter<0
       @bikeArray.splice(index,1)
       @setObject "bikeList", @bikeArray
       @setItem "counter", @counter
@@ -41,6 +42,7 @@ class Storage
   removeBikeByIndex: (index) ->
     if index > -1 and index < @bikeArray.length
       @counter-=1
+      @counter=0 if @counter<0
       @bikeArray.splice(index,1)
       @setObject "bikeList", @bikeArray
       @setItem "counter", @counter
