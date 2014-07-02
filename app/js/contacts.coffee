@@ -49,26 +49,25 @@ $(window).resize ->
   .end()
 
 $(document).ready ->
-  index0 = $(".point.activve").index()
   $(".point").click ->
-    index1 = $(this).index()
+    index = $(this).index()
+    index0 = $(".point1").index()
+    console.log(index)
     console.log(index0)
-    console.log(index1)
-    ind = index1 - 1
+    ind = index - 1
+    $(".point:nth-child(#{index0+1})").removeClass("point1")
+    $(".point:nth-child(#{index0+1})").addClass("point"+ind)
+
+
     $(".point:nth-child(3)").removeClass("point1")
-    $(".point:nth-child(3)").removeClass("point2")
-    $(".point:nth-child(3)").removeClass("point3")
-    $(".point:nth-child(3)").removeClass("point4")
-    $(".point:nth-child(3)").removeClass("point5")
-    $(".point:nth-child(3)").addClass("point"+ind)
-    # $(".point:nth-child(4)").removeClass("point1")
-    # $(".point:nth-child(5)").removeClass("point1")
-    # $(".point:nth-child(6)").removeClass("point1")
-    # $(".point:nth-child(7)").removeClass("point1")
-    $(".point:nth-child(#{index1+1})").removeClass("point2")
-    $(".point:nth-child(#{index1+1})").removeClass("point3")
-    $(".point:nth-child(#{index1+1})").removeClass("point4")
-    $(".point:nth-child(#{index1+1})").removeClass("point5")
-    $(".point:nth-child(#{index1+1})").addClass("point1")
-    index0 = index1 + 1
+    $(".point:nth-child(4)").removeClass("point1")
+    $(".point:nth-child(5)").removeClass("point1")
+    $(".point:nth-child(6)").removeClass("point1")
+    $(".point:nth-child(7)").removeClass("point1")
+    $(".point:nth-child(#{index+1})").removeClass("point2")
+    $(".point:nth-child(#{index+1})").removeClass("point3")
+    $(".point:nth-child(#{index+1})").removeClass("point4")
+    $(".point:nth-child(#{index+1})").removeClass("point5")
+    $(".point:nth-child(#{index+1})").addClass("point1")
+
 
