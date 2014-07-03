@@ -1,7 +1,9 @@
+current = 0
+
 initialize = () ->
   mapOptions =
     center: new google.maps.LatLng(47.225754,39.729253)
-    zoom: 18
+    zoom: 16
     mapTypeId: google.maps.MapTypeId.ROADMAP
   styles = [
     {
@@ -10,7 +12,6 @@ initialize = () ->
       ]
     }
   ]
-
   map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions)
   map.setOptions({styles: styles})
 
@@ -48,26 +49,33 @@ $(window).resize ->
   .duration('0s')
   .end()
 
+
+a = [{x: 47.225754,y: 39.729253}, {x: 47.2117602, y: 39.727971}, {x: 47.2985102, y: 39.785704}, {x: 47.2117081, y: 39.5882418}, {x: 47.228489, y: 39.744771} ]
 $(document).ready ->
-  $(".point").click ->
+  $(".point2 li").click ->
     index = $(this).index()
-    index0 = $(".point1").index()
-    console.log(index)
-    console.log(index0)
-    ind = index - 1
-    $(".point:nth-child(#{index0+1})").removeClass("point1")
-    $(".point:nth-child(#{index0+1})").addClass("point"+ind)
+    console.log index
+    $(".point2 li:eq(#{index})").slideToggle('slow')
+    $(".point1 li:eq(#{index})").fadeIn('slow')
+    xy = new google.maps.LatLng(a[index].x, a[index].y)
+    cEnter = new google.maps.LatLng(a[0].x, a[0].y)
+    myOptions =
+      zoom: 16
+      center: cEnter
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    styles = [
+      {
+        stylers: [
+          { saturation: -100 }
+        ]
+      }
+    ]
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions)
+    map.setOptions({styles: styles})
+    map.panTo(xy)
+    $(".point2 li:eq(#{current})").slideToggle('slow')
+    $(".point1 li:eq(#{current})").fadeOut('slow')
+    current = index
 
-
-    $(".point:nth-child(3)").removeClass("point1")
-    $(".point:nth-child(4)").removeClass("point1")
-    $(".point:nth-child(5)").removeClass("point1")
-    $(".point:nth-child(6)").removeClass("point1")
-    $(".point:nth-child(7)").removeClass("point1")
-    $(".point:nth-child(#{index+1})").removeClass("point2")
-    $(".point:nth-child(#{index+1})").removeClass("point3")
-    $(".point:nth-child(#{index+1})").removeClass("point4")
-    $(".point:nth-child(#{index+1})").removeClass("point5")
-    $(".point:nth-child(#{index+1})").addClass("point1")
 
 

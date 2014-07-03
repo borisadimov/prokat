@@ -1,83 +1,78 @@
 body
   onload initialize()
-  .content
-    padding-bottom 0
-    height 800px
+
+.contentt
+  padding-bottom 0
+  height 800px
+  width 100%
+  #map_canvas
+    position relative
     width 100%
-    #map_canvas
-      position relative
-      width 100%
-      height 100%
-      z-index 1
-    .innerrr
-      position absolute
-      width 940px
+    height 100%
+    z-index 1
+  .innerrr
+    position absolute
+    width 940px
+    height 800px
+    top 130px
+    left 20%
+    transform translate(-50%,0)
+    //не работает стрчока выше - хз почему
+    background none
+    .white_block
       height 800px
-      top 130px
-      left 20%
-      transform translate(-50%,0)
-      //не работает стрчока выше - хз почему
-      background none
-      .white_block
-        height 800px
-        min-height 400px
-        background white
-        width 400px
+      min-height 400px
+      background white
+      width 360px
+      position absolute
+      right 0
+      top 0
+      z-index 2
+      display table
+      p
+        font-size 24px
+        line-height 1.2
+        color #307cbc
         position absolute
-        right 0
-        top 0
-        z-index 2
-        display table
-        p
-          font-size 24px
-          line-height 1.2
-          color #307cbc
-          position absolute
-          left 40px
-          &:nth-child(1)
-            top 35px
-          &:nth-child(2)
-            top 80px
-          .big
-            font-size 42px
-        .green
-          background green !important
-        &.point1
-          left -80px !important
-          padding-top 10px !important
-          padding-left 210px !important
-          background #307cbc
-          top 160px
-          p
-            color white !important
-          &:hover
-            background #307cbc !important
-        &.point2
-          top 260px
-        &.point3
-          top 380px
-        &.point4
-          top 500px
-        &.point5
-          top 620px
-        &.point
-          position absolute
-          left 120px
+        left 40px
+        &:nth-child(1)
+          top 35px
+        &:nth-child(2)
+          top 80px
+        .big
+          font-size 42px
+      ul.point1
+        position relative
+        height 80px
+        background #aaa
+        margin-left -80px !important
+        margin-top 160px
+        background #307cbc
+        width 480px
+        li
+          position absolute !important
+          left 240px
+          top 30px
+          width 280px
+          color white
+      ul.point2
+        width 400px
+        li
+          position relative
+          margin-left 120px
           height 80px
-          width 270px
-          padding-top 30px
-          padding-bottom 10px
-          padding-left 10px
+          width 280px
           cursor pointer
           transition background 0.5s ease
           p
             color black
             font-size 16px
-            position relative
-            left 0
-            top 0
+            vertical-align center
           &:hover
             background #efefef
+
+
+
 
 
 
