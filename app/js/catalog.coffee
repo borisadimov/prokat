@@ -1,6 +1,6 @@
 Minibike = require "templates/minibike"
 isCoinAnimated = false
-
+@isCoinAnimated = isCoinAnimated
 class Bike
   constructor: (@model, @img, @url) ->
 
@@ -46,7 +46,8 @@ $ ->
       }
       .animate {top: newTop},  { queue: false, duration:1000, easing: "easeOutQuart"}
       .animate {left: newLeft},  { queue: false, duration:1000, complete: ->
-        $(".coin").animate {opacity: "0"}, 200
+        $(".coin").animate {opacity: "0"}, 200, ()->
+          $(".coin").css("top","0px")
         $(".icon svg").attr("style", "opacity: 1")
         isCoinAnimated = false
       }

@@ -1,0 +1,60 @@
+file(name, ext, path)
+  path + '/' + name + '.' + ext
+
+font-face(family, font=family, path='../fonts')
+  @font-face
+    font-family family
+    src url(file(font, 'eot', path))
+    src url(file(font, 'eot?#iefix', path)) format("embedded-opentype"),url(file(font, 'woff', path)) format("woff"),url(file(font, 'ttf', path)) format("truetype"),url(file(font, 'svg#' + family, path)) format("svg")
+    font-weight normal
+    font-style normal
+
+font-face('Gals','gals')
+font-face('Helvetica','helvetica')
+font-face('Gill','gil')
+
+
+@import 'nib'
+
+.bike
+  text-align center
+
+  h3
+    font-size 32px
+    text-align center
+    padding 50px 0
+  .left,.middle,.right
+    display inline-block
+  .left
+    width 380px
+    overflow hidden
+    img
+      width 100%
+  .middle
+    width auto
+    vertical-align top
+    margin 0 40px 0 40px
+  .right
+    width 270px
+    vertical-align top
+    text-align left
+
+
+.button
+  width 150px
+  margin 20px auto
+  background #000
+  color #fff
+  font-size 12px
+  padding 6px 0
+  cursor pointer
+  transition all 0.4s ease
+  text-align center
+
+
+
+
+
+
+
+

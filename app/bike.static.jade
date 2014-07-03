@@ -1,0 +1,126 @@
+doctype html
+head
+  meta(name="viewport" content="width=device-width")
+
+  link(rel="stylesheet" href="stylesheets/app.css")
+
+  script(src="javascripts/vendor.js")
+  script(src="javascripts/app.js")
+
+  script.
+    require('js/initialize');
+    require('js/catalog');
+
+
+
+body
+  .coin
+  .menu
+    .inner
+      ul
+        li
+          a(href="#") прокат
+        li
+          a(href="#") инфо
+        li
+          a(href="#") галерея
+        li
+          a(href="#") контакты
+      .logo
+       img(src="/i/logo.png")
+  .submenu.fix
+    .inner
+      ul
+        li
+          a(href="#") велики
+        li
+          a(href="#") ролики
+        li
+          a(href="#") самокаты
+        li
+          a(href="#") сноуборды
+        li
+          a(href="#") фото/видео
+        li
+          a(href="#") туризм
+        li
+          a(href="#") отдых
+  .content
+    .inner
+      .bike
+        h3 Schwinn Corvette
+        .left
+          img(src="i/schwinn.jpg")
+        .middle
+          table
+            thead
+              tr
+                th(colspan="2") Характеристики
+            tbody
+              tr
+                td Тип
+                td Городской
+              tr
+                td Цвет
+                td Черный
+              tr
+                td Размер рамы
+                td М
+              tr
+                td Скорости
+                td 1
+
+        .right
+          p.text
+            | Стильный и мощный хардтейл бренда GT для кросс-кантри —&nbsp;
+            | GT Aggressor. Предназначен для велопрогулок по городским улицам
+            | и скверам и прекрасно адаптирован для несложных лесных велопоходов.
+      .button.putInBag забронировать
+
+
+  .social.relative
+    .footer.relative
+      .inner
+        .left
+          p служба проката.
+          p Ростов-на-Дону.
+        .middle
+          p заказ по телефону
+          p 256-43-26
+        .right
+          .bag
+            .icon
+              include assets/i/check.svg
+
+            p оформить
+            p заказ
+    .inner
+      .vk
+        a.logo(src="vk.com/prokatvrostove")
+          img(src="i/vk.png")
+        script(type='text/javascript', src='//vk.com/js/api/openapi.js?113')
+        #vk_groups
+        script.
+          VK.Widgets.Group("vk_groups", {
+            mode: "0",
+            width: "300",
+            height: "360",
+            color1: "307cbc",
+            color2: "FFFFFF",
+            color3: "ffffff"
+          }
+          , 10802362);
+
+      .like
+        img(src="i/likeit.png")
+
+      .fb
+        .people 555 people like
+        .container
+          iframe(src='//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fprokatvrostove&width=380&height=380&colorscheme=dark&show_faces=true&header=false&stream=false&show_border=false&appId=216056395225405', scrolling='no', frameborder='0', style='border: none; overflow: hidden; width: 300px; height: 258px;', allowtransparency='true')
+  script.
+    require('js/bike');
+
+
+
+

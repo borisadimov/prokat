@@ -47,9 +47,9 @@ $(document).ready ->
       $(".leftar,.rightar").css("visibility","visible")
 
   slideLeft = () ->
-      $('.slider').animate({scrollLeft: "#{$('.slider').scrollLeft()-95}px"}, 300)
+      $('.slider').animate({scrollLeft: "#{$('.slider').scrollLeft()-93}px"}, 300)
   slideRight = () ->
-      $('.slider').animate({scrollLeft: "#{$('.slider').scrollLeft()+95}px"}, 300)
+      $('.slider').animate({scrollLeft: "#{$('.slider').scrollLeft()+93}px"}, 300)
 
   $(".leftar").click _.throttle(slideLeft, 500)
   $(".rightar").click _.throttle(slideRight, 500)
@@ -59,7 +59,7 @@ $(document).ready ->
     else
       if $(".minibike").length > 3
         $(".leftar").css("visibility","visible")
-    if $('.slider').scrollLeft() is $('.slider').width()-90
+    if $('.slider').scrollLeft()+$('.slider').width() is $('.scroller').width()
       $(".rightar").css("visibility","hidden")
     else
       if $(".minibike").length > 3
