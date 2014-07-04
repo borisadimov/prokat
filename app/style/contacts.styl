@@ -46,18 +46,34 @@ body
           font-size 42px
       ul.point1
         position relative
-        height 80px
+        height 100px
         background #aaa
         margin-left -80px !important
-        margin-top 160px
+        margin-top 150px
         background #307cbc
         width 480px
+        &:after
+          right: 100%;
+          top: 50%;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: rgba(136, 183, 213, 0);
+          border-right-color: #307cbc;
+          border-width: 50px;
+          margin-top: -50px;
+        .fst
+          top 10px
         li
           position absolute !important
           left 240px
-          top 30px
+          top 20px
           width 280px
           color white
+          line-height 1.2
       ul.point2
         width 400px
         li
