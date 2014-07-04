@@ -38,27 +38,38 @@ body
         p <span class="big">5</span> пунктов проката
         p в Ростове-на-Дону
         ul.point1
-          li(style="display:block;")
+          li.fst(style="display:block;")
             | "Центральный велопрокат"
-            //- p ул. Суворова 52а,
-            //- p тел. 268-12-58, +79515010209
-            //- p ежедневно, круглосуточно
+            br
+            | ул. Суворова 52а,
+            br
+            | тел. 268-12-58, +79515010209
+            br
+            | ежедневно, круглосуточно
           li(style="display:none;")
             | "Прокат на городском пляже"
-            //- p ул. Левобережная 1в,
-            //- p тел. 265-16-95, +79043419977
+            br
+            | ул. Левобережная 1в,
+            br
+            | тел. 265-16-95, +79043419977
           li(style="display:none;")
             | "Велопрокат на Каскадной"
-            //- p ул. Каскадная 96,
-            //- p тел. 260-06-82, +79043429979
+            br
+            | ул. Каскадная 96,
+            br
+            | тел. 260-06-82, +79043429979
           li(style="display:none;")
             | "Прокат на пляже Каррера"
-            //- p ул. Пескова 17,
-            //- p тел. 256-77-28, +79034067728
+            br
+            | ул. Пескова 17,
+            br
+            | p тел. 256-77-28, +79034067728
           li(style="display:none;")
             | "Велопрокат на Театральной"
-            //- p ул. Театральная площадь 1,
-            //- p тел. 256-43-26, +79034064326
+            br
+            | ул. Театральная площадь 1,
+            br
+            | тел. 256-43-26, +79034064326
         ul.point2
           li(style="display:none;")
             p "Центральный велопрокат"
@@ -90,8 +101,8 @@ body
 
 
 
-  .social
-    .footer
+  .social.relative
+    .footer.relative
       .inner
         .left
           p служба проката.
@@ -106,6 +117,33 @@ body
 
             p оформить
             p заказ
+    .inner
+      .vk
+        a.logo(src="vk.com/prokatvrostove")
+          img(src="i/vk.png")
+        script(type='text/javascript', src='//vk.com/js/api/openapi.js?113')
+        #vk_groups
+        script.
+          VK.Widgets.Group("vk_groups", {
+            mode: "0",
+            width: "300",
+            height: "360",
+            color1: "307cbc",
+            color2: "FFFFFF",
+            color3: "ffffff"
+          }
+          , 10802362);
+
+      .like
+        img(src="i/likeit.png")
+
+      .fb
+        .people 555 people like
+        .container
+          iframe(src='//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fprokatvrostove&width=380&height=380&colorscheme=dark&show_faces=true&header=false&stream=false&show_border=false&appId=216056395225405', scrolling='no', frameborder='0', style='border: none; overflow: hidden; width: 300px; height: 258px;', allowtransparency='true')
+
+
+
 
 
 
