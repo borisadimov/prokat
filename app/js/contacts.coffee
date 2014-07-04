@@ -1,8 +1,31 @@
 current = 0
+resize = () ->
+  Height = $(window).height()-228
+  if Height > 400
+      $(".contentt").css({"height": Height})
+      $("body").css({"height": Height})
+      $(".innerrr").css({"height": Height})
+      $(".white_block").css({"height": Height})
 
 initialize = () ->
+  get_ww = () ->
+    frameWidth = 480
+    if self.innerWidth
+      frameWidth = self.innerWidth
+    else
+      if (document.documentElement && document.documentElement.clientWidth)
+        frameWidth = document.documentElement.clientWidth
+      else
+        if (document.body)
+          frameWidth = document.body.clientWidth
+    return frameWidth
+  dx = get_ww()
+  xx = 47.228652
+  yy = 39.7348182
+  if dx>800
+    xx = xx - ((dx-800)*(0.000005))
   mapOptions =
-    center: new google.maps.LatLng(47.2225279,39.7348182)
+    center: new google.maps.LatLng(xx,yy)
     zoom: 16
     mapTypeId: google.maps.MapTypeId.ROADMAP
   point = new google.maps.LatLng(47.225182, 39.728823)
@@ -68,16 +91,39 @@ $(window).resize ->
   .duration('0s')
   .end()
 
+$(window).resize ->
+  do resize
 
-a = [{x: 47.2231309,y: 39.7348923}, {x: 47.2091371, y: 39.7336103}, {x: 47.2958871, y: 39.7913433}, {x: 47.209085, y: 39.5938811}, {x: 47.2258659, y: 39.7504103} ]
+a = [{x: 47.2181009,y: 39.7348923}, {x: 47.2041071, y: 39.7336103}, {x: 47.2908571, y: 39.7913433}, {x: 47.204055, y: 39.5938811}, {x: 47.2208359, y: 39.7504103} ]
 b = [{x: 47.225754,y: 39.729253}, {x: 47.2117602, y: 39.727971}, {x: 47.2985102, y: 39.785704}, {x: 47.2117081, y: 39.5882418}, {x: 47.228489, y: 39.744771} ]
 $(document).ready ->
+  do resize
+
+  $(window).off "scroll"
+
   $(".point2 li").click ->
     index = $(this).index()
     console.log index
     $(".point2 li:eq(#{index})").slideToggle('slow')
     $(".point1 li:eq(#{index})").fadeIn('slow')
-    xy = new google.maps.LatLng(a[index].x, a[index].y)
+
+    get_ww = () ->
+      frameWidth = 480
+      if self.innerWidth
+        frameWidth = self.innerWidth
+      else
+        if (document.documentElement && document.documentElement.clientWidth)
+          frameWidth = document.documentElement.clientWidth
+        else
+          if (document.body)
+            frameWidth = document.body.clientWidth
+      return frameWidth
+    dx = get_ww()
+    xx = a[index].x
+    yy = a[index].y
+    if dx>800
+      xx = xx + ((dx-800)*(0.000005))
+    xy = new google.maps.LatLng(xx, yy)
     cEnter = new google.maps.LatLng(a[0].x, a[0].y)
     myOptions =
       zoom: 16

@@ -2,11 +2,12 @@ body
   onload initialize()
   .contentt
     padding-bottom 0
-    height 800px
+    //height 800px
 
 .contentt
   padding-bottom 0
-  height 800px
+  // height 800px
+  min-height 600px
   width 100%
   #map_canvas
     position relative
@@ -16,15 +17,16 @@ body
   .innerrr
     position absolute
     width 940px
-    height 800px
+    min-height 600px
+    // height 800px
     top 130px
     left 20%
     transform translate(-50%,0)
     //не работает стрчока выше - хз почему
     background none
     .white_block
-      height 800px
-      min-height 400px
+      // height 800px
+      min-height 600px
       background white
       width 360px
       position absolute
@@ -76,19 +78,24 @@ body
           line-height 1.2
       ul.point2
         width 400px
+        height 80px
         li
-          position relative
-          margin-left 120px
+          width 400px
           height 80px
-          width 280px
+          position relative
           cursor pointer
           transition background 0.5s ease
           p
+            padding-left 120px
+            margin-top -5px
             color black
             font-size 16px
             vertical-align center
           &:hover
-            background #efefef
+            background #307cbc
+            color white !important
+            p
+              color white
 
 
 
