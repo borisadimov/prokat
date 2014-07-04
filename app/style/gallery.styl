@@ -1,0 +1,40 @@
+.clImgList
+  text-align center
+  padding 5px
+  overflow hidden
+
+  .item
+  //   text-align left
+  //   font-size medium
+    width 326px
+    vertical-align top
+    display inline-block
+    margin 10px
+  //   img
+  //     width 160px
+  //     height 160px
+    a
+      background: white;
+      display: inline-block
+      margin: 0 15px 30px;
+      padding: 10px 10px 25px;
+      text-align: center;
+      text-decoration: none;
+      -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+      -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+      box-shadow: 0 4px 6px rgba(0,0,0,.3);
+      -webkit-transition: all .15s linear;
+      -moz-transition: all .15s linear;
+      transition: all .15s linear;
+      z-index:0;
+      position:relative;
+      &:after
+        color: #333;
+        font-size: 20px;
+        font-family gals
+        content: attr(title);
+        position: relative;
+        top:15px;
+    img
+      display: block;
+      width: inherit;

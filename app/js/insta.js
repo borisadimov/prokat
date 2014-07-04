@@ -18,7 +18,7 @@ Instagram.Config = {
 Instagram.Template = {};
 Instagram.Template.Views = {
 
-  "photo": '<item class="h' + cHash + '"><a href="{url}" target="_blank"><img src="{photo}" style="display:none;" onload="Instagram.App.showPhoto(this);"></a></item>'
+  "photo": '<div class="item h' + cHash + '"><a href="{url}" title="{title}" target="_blank"><img  src="{photo}" style="display:none;" onload="Instagram.App.showPhoto(this);"></a></div>'
 };
 
 Instagram.Template.generate = function(template, data){
@@ -42,11 +42,16 @@ Instagram.Template.generate = function(template, data){
   }
 
   function toTemplate(photo){
+    if (photo.caption)
+      {var name = photo.caption.from.username}
+    else
+      {var name = "anonimous"}
     photo = {
       count: photo.likes.count,
       avatar: photo.user.profile_picture,
       photo: photo.images.low_resolution.url,
-      url: photo.link
+      url: photo.link,
+      title: "via "+name
     };
 
     return Instagram.Template.generate('photo', photo);
@@ -148,6 +153,7 @@ Instagram.Template.generate = function(template, data){
 
 $(function(){
 
+
   Instagram.App.init();
 
   var doReload = function() {
@@ -159,7 +165,7 @@ $(function(){
     var cObjects = $('div.clImgList item.h' + cHashLast);
 
     if ( 0 < $(cObjects).length ) {
-      $('div.clImgList').animate({'opacity': 0.5}, 500);
+      $('div.clImgList').animate({'opacity': 1}, 500);
       $('.paginate a.button').attr({'data-max-tag-id': ''});
     }
 
@@ -181,67 +187,15 @@ $(function(){
               };
               setTimeout( function() { doSearch(); }, 100 );
         }, 500 );
-        if ( 10 > cStep )
-          setTimeout( function() { doReload(); }, 300000 );
+        /*if ( 10 > cStep )
+          setTimeout( function() { doReload(); }, 300000 );*/
   };
   fGetRecentTagged();
 });
 
 
 
-$(function(){
 
-	var body = $('body'),
-		square_l = $('.square-l'),
-		square_v = $('.square-l, .square-r'),
-		square_h = $('.square-t, .square-b');
-
-	var update_square = function(){
-		var w = body.width(),
-			h = body.height(),
-			side = h,
-			margin = parseInt(square_l.css('left'), 10) * 2,
-			square_top = margin / 2;
-
-		if (w < h) {
-			side = w;
-			square_top = margin / 2 + (h - w) / 2;
-		};
-
-		side = side - margin;
-
-		square_v.css('height', side);
-		square_h.css('width', side);
-
-		square_l.css('bottom', square_top);
-	};
-
-	update_square();
-	$(window).resize(update_square);
-
-	setTimeout(function(){
-		$('body').addClass('sq-draw');
-	}, 200);
-
-	var reloadCnts = function() {
-
-											$.ajax({type: 'POST',
-                                                 dataType: 'json',
-                                                     data: { 'ajax': 1 },
-                                                      url: 'index.php',
-                                                  success: function(r) {
-
-                                                      if (r) {
-                                                          $('#fbcount').html( r.fbcount );
-                                                          $('#twcount').html( r.twcount );
-                                                          $('#gpcount').html( r.gpcount );
-                                                      }
-                                                  }
-                                             });
-		setTimeout( reloadCnts, 5000 );
-	};
-	setTimeout( reloadCnts, 5000 );
-});
 /*
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
