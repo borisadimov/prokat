@@ -1,0 +1,118 @@
+file(name, ext, path)
+  path + '/' + name + '.' + ext
+
+@import 'nib'
+
+body
+  .nofeatures
+    border none !important
+    &:hover
+      cursor auto !important
+  .nocolor
+    background none !important
+  .backy
+    &:hover
+      background #ebebeb
+      cursor pointer
+  .price
+    .submenu
+      ul
+        li
+          &:nth-child(1)
+            margin-left 250px
+    .content
+      .inner
+        .frst
+          margin-top 70px !important
+        h4
+          font-size 24px
+          font-family Gals
+          font-weight bold
+          width 680px
+          margin-left 170px
+          margin-top 150px
+        p
+          width 680px
+          margin-left 170px
+          margin-top 50px
+          line-height 1.2
+          font-family Gill
+          font-size 18px
+        .additionalservice
+          margin-bottom 150px
+          ul
+            padding-left 5px
+            li
+              margin-bottom 5px
+          .col1
+            width 600px !important
+            padding-right 30px
+            //background #ebebeb
+            cursor pointer
+            padding-left 30px
+          .col2
+            width 200px
+          .col1_1
+            p
+              margin 10px
+              margin-left 5px
+              width auto
+              display inline-block
+              padding 0px
+              border-bottom 1px dashed black
+        table
+          p
+            font-size 16px
+          border-collapse collapse
+          width 600px
+          margin-left 170px
+          margin-top 50px
+          .lastrow
+            border-bottom 3px solid black
+            height 30px
+          thead
+            tr
+              border-top 3px solid black
+              border-bottom 1px solid black
+              display table-row
+              max-width 600px
+
+              td
+                width 100px
+                text-align center
+                p
+                  margin 10px
+                  width auto
+                  display inline-block
+                  text-align center
+                  padding 0px
+                  font-weight bold
+                  border-bottom 1px dashed black
+                  &:hover
+                    cursor help
+              .col1
+                width 300px !important
+                p
+                  text-align left !important
+          tr
+            display table-row
+            max-width 600px
+            transition background 0.25s ease
+            &:hover
+              background #ebebeb
+              cursor pointer
+            &:last-child
+              &:hover
+                background none
+                cursor auto
+            td
+              width 100px
+              p
+                margin 0
+                width auto
+                text-align center
+                padding 10px 10px 10px 5px
+            .col1
+              width 300px !important
+              p
+                text-align left !important

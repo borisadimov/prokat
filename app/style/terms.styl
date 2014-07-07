@@ -1,0 +1,101 @@
+file(name, ext, path)
+  path + '/' + name + '.' + ext
+
+@import 'nib'
+
+body
+  .terms
+    .submenu
+      ul
+        li
+          &:nth-child(1)
+            margin-left 250px
+    .content
+      .inner
+        h4
+          font-size 20px
+          font-family Gals
+          font-weight bold
+          width 680px
+          margin-left 130px
+          margin-top 70px
+        p
+          width 680px
+          margin-left 130px
+          margin-top 50px
+          line-height 1.2
+          font-family Gill
+          &:nth-child(14)
+            margin-top 0px
+            text-align center
+        h2
+          font-size 42px
+          text-align center
+          font-family Gals
+          font-weight bold
+          line-height 1.2
+          &:nth-child(12)
+            margin-top 70px
+        h3
+          font-size 36px
+          text-align center
+          font-family Gals
+          font-weight bold
+          line-height 1.2
+        .pictures
+          width 880px
+          height 520px
+          margin-left 30px
+          margin-top 70px
+          position relative
+          img
+            position absolute
+            cursor pointer
+            transition all 0.25s ease-in-out
+            &:hover
+              transform scale(1.2, 1.2)
+            &:nth-child(1)
+              left 0px
+            &:nth-child(2)
+              left 240px
+              top 5px
+            &:nth-child(3)
+              right 240px
+              top -4px
+            &:nth-child(4)
+              right 0px
+              top -2px
+            &:nth-child(5)
+              top 250px
+              left 245px
+            &:nth-child(6)
+              top 245px
+              right 245px
+          p
+            position absolute
+            margin 0 !important
+            width 100px
+            text-align center
+            &:nth-child(7)
+              left 15px
+              top 150px
+            &:nth-child(8)
+              left 260px
+              top 150px
+              width 80px
+            &:nth-child(9)
+              right 270px
+              top 150px
+              width 80px
+            &:nth-child(10)
+              right 10px
+              top 150px
+            &:nth-child(11)
+              top 400px
+              left 230px
+              width 150px
+            &:nth-child(12)
+              top 400px
+              right 250px
+              width 110px
+
