@@ -156,8 +156,8 @@ $(document).ready ->
       map: map
       position: point
     map.panTo(xy)
+    $(".point1 li:eq(#{current})").fadeOut()
     $(".point2 li:eq(#{current})").slideToggle('slow')
-    $(".point1 li:eq(#{current})").fadeOut('slow')
     current = index
 
 

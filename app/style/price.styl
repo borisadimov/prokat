@@ -38,6 +38,11 @@ body
           line-height 1.2
           font-family Gill
           font-size 18px
+        .hidden
+          width 380px
+          padding 10px 5px
+          line-height 1.2
+          margin 0
         .additionalservice
           margin-bottom 150px
           ul
@@ -45,14 +50,17 @@ body
             li
               margin-bottom 5px
           .col1
-            width 600px !important
+            //width 600px !important
             padding-right 30px
             //background #ebebeb
             cursor pointer
-            padding-left 30px
+            padding-left 0px
+            p
+              width 450px !important
           .col2
-            width 200px
+            width 172px
           .col1_1
+            max-width 440px
             p
               margin 10px
               margin-left 5px
@@ -76,7 +84,6 @@ body
               border-bottom 1px solid black
               display table-row
               max-width 600px
-
               td
                 width 100px
                 text-align center
@@ -91,9 +98,25 @@ body
                   &:hover
                     cursor help
               .col1
-                width 300px !important
+                width 370px !important
                 p
                   text-align left !important
+              .prompt
+                display inline-block
+                position relative
+                &:hover
+                  &::after
+                    content attr(data-title)
+                    position absolute
+                    left 120%
+                    top: 120%
+                    z-index 1
+                    background #ebebeb
+                    padding 10px
+                    width 300px
+                    text-align left
+                    font-weight normal !important
+
           tr
             display table-row
             max-width 600px
@@ -116,3 +139,6 @@ body
               width 300px !important
               p
                 text-align left !important
+
+
+
