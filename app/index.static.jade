@@ -15,15 +15,16 @@ body
     .inner
       ul
         li
-          a прокат
+          a(href="catalog.html") прокат
         li
-          a инфо
+          a(href="terms.html") инфо
         li
-          a галерея
+          a(href="gallery.html") галерея
         li
-          a контакты
+          a(href="contacts.html") контакты
       .logo
-       img(src="/i/logo.png")
+        a(href="index.html")
+          img(src="/i/logo.png")
   .main
     .inner
       .top_spacer
@@ -113,3 +114,44 @@ body
                 p Schwinn Corvette
               .allmodel
                 p все модели
+
+    .social.relative
+      .footer.relative
+        .inner
+          .left
+            p служба проката.
+            p Ростов-на-Дону.
+          .middle
+            p заказ по телефону
+            p 256-43-26
+          .right
+            .bag
+              .icon
+                include assets/i/check.svg
+
+              p оформить
+              p заказ
+      .inner
+        .vk
+          a.logo(src="vk.com/prokatvrostove")
+            img(src="i/vk.png")
+          script(type='text/javascript', src='//vk.com/js/api/openapi.js?113')
+          #vk_groups
+          script.
+            VK.Widgets.Group("vk_groups", {
+              mode: "0",
+              width: "300",
+              height: "360",
+              color1: "307cbc",
+              color2: "FFFFFF",
+              color3: "ffffff"
+            }
+            , 10802362);
+
+        .like
+          img(src="i/likeit.png")
+
+        .fb
+          .people 555 people like
+          .container
+            iframe(src='//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fprokatvrostove&width=380&height=380&colorscheme=dark&show_faces=true&header=false&stream=false&show_border=false&appId=216056395225405', scrolling='no', frameborder='0', style='border: none; overflow: hidden; width: 300px; height: 258px;', allowtransparency='true')
