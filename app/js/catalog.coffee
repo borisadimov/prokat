@@ -1,3 +1,4 @@
+gx = 0
 Minibike = require "templates/minibike"
 isCoinAnimated = false
 @isCoinAnimated = isCoinAnimated
@@ -5,7 +6,16 @@ class Bike
   constructor: (@model, @img, @url) ->
 
 
-$ ->
+$(document).ready ->
+  if $(".content").height()<720
+    $('.footer').addClass "relative"
+    $('.social').addClass "relative"
+  gx = setInterval ->
+    if $(".content").height()<720
+      $('.footer').addClass "relative"
+      $('.social').addClass "relative"
+      clearInterval(gx)
+  ,50
   $(window).scroll ->
     if $(window).scrollTop() >= 130
       $('.submenu.fix').addClass 'fixed'
