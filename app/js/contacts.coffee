@@ -1,6 +1,7 @@
 current = 0
 resize = () ->
   Height = $(window).height()-228
+  console.log(Height)
   if Height > 400
       $(".contentt").css({"height": Height})
       $("body").css({"height": Height})
@@ -19,16 +20,17 @@ initialize = () ->
         if (document.body)
           frameWidth = document.body.clientWidth
     return frameWidth
-  dx = get_ww()
-  xx = 47.2251819
-  yy = 39.7288349
-  if dx>800
-    xx = xx - ((dx-800)*(0.000005))
+  #dx = get_ww()
+  dx = $(window).height()-228
+  xx = 47.22400
+  yy = 39.732471
+  if dx>531
+    xx = xx - ((dx-531)*(0.000004))
   mapOptions =
     center: new google.maps.LatLng(xx,yy)
     zoom: 16
     mapTypeId: google.maps.MapTypeId.ROADMAP
-  point = new google.maps.LatLng(47.225182, 39.728823)
+  point = new google.maps.LatLng(47.2251819, 39.7288349)
   styles = [
     {
       stylers: [
@@ -93,8 +95,9 @@ $(window).resize ->
 
 $(window).resize ->
   do resize
-a = [{x: 47.2181009,y: 39.7348923}, {x: 47.2041071, y: 39.7336103}, {x: 47.2908571, y: 39.7913433}, {x: 47.204055, y: 39.5938811}, {x: 47.2208359, y: 39.7504103} ]
-b = [{x: 47.2251819,y: 39.7288349}, {x: 47.2117602, y: 39.727971}, {x: 47.2985102, y: 39.785704}, {x: 47.2117081, y: 39.5882418}, {x: 47.228489, y: 39.744771} ]
+
+a = [{x: 47.22400,y: 39.732471}, {x: 47.2105783, y: 39.7316079}, {x: 47.2980478, y: 39.7938699}, {x: 47.2090182, y: 39.5939311}, {x: 47.2273071, y: 39.7484071} ]
+b = [{x: 47.2251819,y: 39.7288349}, {x: 47.2117602, y: 39.7279718}, {x: 47.2992297, y: 39.7902338}, {x: 47.2102001, y: 39.590295}, {x: 47.228489, y: 39.744771} ]
 $(document).ready ->
   do resize
 
@@ -117,11 +120,12 @@ $(document).ready ->
           if (document.body)
             frameWidth = document.body.clientWidth
       return frameWidth
-    dx = get_ww()
+    #dx = get_ww()
+    dx = $(window).height()-228
     xx = a[index].x
     yy = a[index].y
-    if dx>800
-      xx = xx + ((dx-800)*(0.000005))
+    if dx>531
+      xx = xx - ((dx-531)*(0.000004))
     xy = new google.maps.LatLng(xx, yy)
     cEnter = new google.maps.LatLng(a[0].x, a[0].y)
     myOptions =

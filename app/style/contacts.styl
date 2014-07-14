@@ -1,3 +1,4 @@
+@import 'nib'
 body
   onload initialize()
   .contentt
@@ -15,7 +16,7 @@ body
     height 100%
     z-index 1
   .t50
-    transform translate( 50% , 0) //не пашет! хз почему
+    transform translate( -50% , 0) //не пашет! хз почему
   .innerrr
     position absolute
     width 940px
@@ -24,13 +25,14 @@ body
     top 130px
     left 50%
     background none
+    z-index 1
     .white_block
       // height 800px
       min-height 600px
       background white
       width 360px
       position absolute
-      left 580px
+      left 540px
       top 0
       z-index 2
       display table
